@@ -6,6 +6,7 @@ const _ = require('./database/models/index')
 app.use(express.json())
 
 app.use('/api/auth', require('./routes/auth'))
+app.use('/api/user', require('./routes/user'))
 
 app.use((err, _, res, __) => {
   res.status(err.status || 500).json({
